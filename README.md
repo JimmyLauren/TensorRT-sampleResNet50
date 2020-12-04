@@ -65,3 +65,9 @@ Using INT8 during inference need calibration, `sampleGenINT8Cal.cpp` will genera
  
 Total validation images: 1305, errors = 109, error rate = 8.35249%
 ```
+ MY OWN UNDERSTANDING
+ 1 write class BatchStream class to read calibration dataset;
+ 2 write class Int8EntropyCalibrator derived from IInt8EntropyCalibrator;
+ 3 create a trt builder, pass Int8EntropyCalibrator class to builder;
+ 4 build the engine, the calibration cache will be generated during the generation automatically.
+
